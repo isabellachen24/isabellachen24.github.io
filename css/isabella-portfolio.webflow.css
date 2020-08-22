@@ -87,6 +87,7 @@ h1 {
   right: 0%;
   bottom: auto;
   background-color: #aff0cc;
+  min-height: 80px;
 }
 
 .process {
