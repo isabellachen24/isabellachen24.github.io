@@ -1,0 +1,101 @@
+:root {
+    --font-plain: Helvetica Neue,Helvetica,Arial,sans-serif;
+    --font-special: Barlow Condensed,Helvetica,sans-serif;
+    --font-mono: Menlo,Courier,Courier New,Andale Mono,monospace;
+    --color-dark: #050505;
+    --color-darkish: #404040;
+    --color-lightish: #e6e6e6;
+    --color-light: #fafafa;
+    --color-mid: grey;
+    --ratio: 1.618;
+    --s-5: calc(var(--s0)/var(--ratio)/var(--ratio)/var(--ratio)/var(--ratio)/var(--ratio));
+    --s-4: calc(var(--s0)/var(--ratio)/var(--ratio)/var(--ratio)/var(--ratio));
+    --s-3: calc(var(--s0)/var(--ratio)/var(--ratio)/var(--ratio));
+    --s-2: calc(var(--s0)/var(--ratio)/var(--ratio));
+    --s-1: calc(var(--s0)/var(--ratio));
+    --s0: 1rem;
+    --s1: calc(var(--s0)*var(--ratio));
+    --s2: calc(var(--s0)*var(--ratio)*var(--ratio));
+    --s3: calc(var(--s0)*var(--ratio)*var(--ratio)*var(--ratio));
+    --s4: calc(var(--s0)*var(--ratio)*var(--ratio)*var(--ratio)*var(--ratio));
+    --s5: calc(var(--s0)*var(--ratio)*var(--ratio)*var(--ratio)*var(--ratio)*var(--ratio));
+    --measure: 65ch;
+    --line-height: var(--ratio);
+    --line-height-small: calc(0.8*var(--ratio));
+    --border-thin: var(--s-5);
+    --border-thick: var(--s-2);
+
+    line-height: var(--ratio);
+    font-size: 16px;
+    // font-family: var(--font-plain);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+*,:after,:before {
+    // box-sizing: border-box;
+    // background-color: inherit;
+    // font-family: inherit;
+    // color: inherit;
+    overflow-wrap: break-word;
+    // margin: 0;
+    // padding: 0;
+    // border: 0 solid;
+}
+
+main > * , footer {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 35rem;
+}
+
+main>*+* {
+    margin-top: var(--s1);
+}
+
+footer {
+    text-align: center;
+    padding: var(--s1);
+}
+
+footer:before {
+    content: "\220e";
+    display: block;
+    padding-bottom: var(--s-1);
+}
+
+.site-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.site-header, .site-main {
+    padding: var(--s2);
+}
+
+.site-header {
+    flex-basis: 15rem;
+    flex-grow: 1;
+    position: relative;
+    outline: var(--border-thin) solid;
+    min-height: 100vh;
+}
+
+.site-nav {
+    ul {
+        list-style: none;
+    }
+}
+
+.site-main {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-width: 66%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+main>ol, main>ul {
+    padding-left: 2em;
+}

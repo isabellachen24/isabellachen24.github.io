@@ -1,0 +1,14 @@
+baseURL = "https://bellachen.me"
+languageCode = "en"
+title = "Isabella Chen's Website"
+
+[params]
+  sitename = "Isabella Chen's Website"
+  description = "This is Isabella Chen's personal website."
+
+[[menu.main]]
+    name = "About"
+    url  = "/about/"
+[[menu.main]]
+    name = "Blog"
+    url  = "/blog/"
